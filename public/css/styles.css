@@ -389,8 +389,14 @@ body {
   background-position: center;
   width: 50%;
 }
+@media screen and (max-width: 875px) {
+  .main-container .photo-gallery {
+    display: none;
+  }
+}
 .main-container .login {
   width: 50%;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

@@ -1,3 +1,8 @@
+.background-square, .main-container .login__item, .post-list, .history {
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -352,11 +357,12 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
 }
 
 .big-button {
   color: #fff;
-  background-color: #0095F6;
+  background-color: #385185;
   border: none;
   padding: 0.5rem 0;
   border-radius: 3px;
@@ -366,6 +372,15 @@ body {
   background-color: #0094f6e1;
 }
 
+.button-without-bg {
+  background: none;
+  border: none;
+  color: #385185;
+}
+.button-without-bg:hover {
+  color: #0094f6e1;
+}
+
 .link {
   text-decoration: none;
 }
@@ -373,6 +388,106 @@ body {
 .img {
   width: 100%;
   object-fit: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 965px;
+  margin: 0 auto;
+}
+.nav__title {
+  max-width: 150px;
+  margin-left: 0.5rem;
+}
+.nav__search input {
+  text-align: center;
+}
+@media screen and (max-width: 875px) {
+  .nav__search {
+    display: none;
+  }
+}
+.nav__icons {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.nav__icons .bx-search {
+  display: none;
+}
+@media screen and (max-width: 875px) {
+  .nav__icons .bx-search {
+    display: inline;
+  }
+}
+
+.history {
+  display: flex;
+  justify-content: space-around;
+  height: 4rem;
+}
+.history__user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0.2rem;
+}
+.history__user i {
+  font-size: 2rem;
+  border: 2px solid magenta;
+  border-radius: 50%;
+}
+.history__user p {
+  margin: 0.1rem;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 3rem auto;
+}
+.post-list__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  padding: 0 0.3rem;
+}
+.post-list__title section {
+  display: flex;
+  align-items: center;
+}
+.post-list__title section p {
+  margin-left: 0.5rem;
+}
+.post-list__icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  padding: 0.2rem 0.3rem;
+}
+.post-list__like {
+  padding: 0.2rem 0.3rem;
+}
+.post-list__comments {
+  padding: 0.2rem 0.3rem;
+}
+.post-list__time {
+  color: #969696da;
+  padding: 0.2rem 0.3rem;
+}
+.post-list__add-comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0.3rem;
+}
+.post-list__add-comments input {
+  width: 80%;
+  background-color: none;
+  border: none;
 }
 
 .main-container {
@@ -389,6 +504,11 @@ body {
   background-position: center;
   width: 50%;
 }
+.main-container .photo-gallery__container {
+  margin-top: 22%;
+  margin-left: 32%;
+  max-width: 55%;
+}
 @media screen and (max-width: 875px) {
   .main-container .photo-gallery {
     display: none;
@@ -402,8 +522,6 @@ body {
   justify-content: space-evenly;
 }
 .main-container .login__item {
-  border: 1px solid #dbdbdb;
-  border-radius: 1px;
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
@@ -429,6 +547,7 @@ body {
 }
 .main-container .login__item form label span {
   font-size: small;
+  color: #969696da;
 }
 .main-container .login__item form label input {
   all: unset;
@@ -441,6 +560,8 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color: #969696da;
+  font-weight: bold;
 }
 .main-container .login__item .separator__line {
   background-color: #dbdbdb;
@@ -470,6 +591,7 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
+  color: #969696da;
 }
 .footer__link {
   display: flex;
@@ -493,6 +615,24 @@ body {
 }
 .footer__language .language__item p {
   padding: 0.5em;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 2px solid #dbdbdb;
+}
+
+.main {
+  width: 100%;
+  margin-top: 1rem;
+}
+.main .container-main {
+  margin: 0 auto;
+  max-width: 965px;
+}
+.main .container-main .post-container {
+  width: 100%;
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
